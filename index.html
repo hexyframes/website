@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help The World</title>
+    <meta name="description" content="Join our mission to eliminate plastic pollution and protect our oceans for future generations">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#000000",
+                        secondary: "#111827",
+                        accent: "#ffffff"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-black text-white">
+    <!-- Header -->
+    <header class="bg-black shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 glass-nav">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-white">Reduce Plastic Pollution</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="#about" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="#mission" class="text-white hover:text-gray-300 transition-colors">Our Mission</a>
+                    <a href="#contact" class="text-white hover:text-gray-300 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-black text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">End Plastic Pollution</h2>
+                <p class="text-xl md:text-2xl mb-8 text-gray-300">Join the movement with us to fix the plastic monarchy</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="join.html" class="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block text-center">Join Our Community</a>
+                    <a href="#about" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors inline-block text-center">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section (darker) -->
+    <section id="product" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img
+                        src="image2.png"
+                        alt="Product image - reusable ocean-cleaning kit"
+                        class="w-full rounded-lg shadow-lg"
+                        loading="lazy"
+                    />
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Pyrolysis Machine</h2>
+                    <p class="text-lg text-gray-300 mb-6">Pyrolysis is an advanced recycling method that uses heat in an oxygen-free environment to break down plastic waste into valuable products like fuel oil, gas, and solid char. Unlike traditional incineration, it prevents burning and instead performs a thermal decomposition to create reusable materials and fuels without producing ash or harmful emissions.</p>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2 mb-6">
+                        <li>Durable</li>
+                        <li>Efficient</li>
+                        <li>Eco-Friendly</li>
+                    </ul>
+                    <a href="#contact" class="inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (made dark) -->
+    <section id="about" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">The Plastic Crisis</h2>
+                    <p class="text-lg text-gray-300 mb-6">Every year, millions of tons of plastic waste enter our oceans, threatening our environment and marine life. Our NGO is dedicated to combating this global crisis through education, innovation, and community action.</p>
+                    <p class="text-lg text-gray-300 mb-8">We believe that together, we can create sustainable solutions and inspire change that will protect our planet for generations to come.</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">6.3 billion tons</div>
+                            <div class="text-gray-400">Plastic Waste In The World</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">60%</div>
+                            <div class="text-gray-400">Marine And Wildlife</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img 
+                        src="playa-plastico.jpg" 
+                        alt="Plastic pollution in ocean affecting marine life" 
+                        class="w-full rounded-lg shadow-lg"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section (darker cards) -->
+    <section id="mission" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Our Approach to Stop Plastic Pollution</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-recycle text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Reduce & Recycle</h3>
+                    <p class="text-gray-300">Promoting sustainable alternatives and improving recycling infrastructure worldwide.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Awareness</h3>
+                    <p class="text-gray-300">Raising awareness about plastic pollution and its impact on marine ecosystems.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hands-helping text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Community Action</h3>
+                    <p class="text-gray-300">Organizing beach and local area cleanups and community initiatives to remove plastic waste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Gallery (darker) -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">The Impact of Plastic Pollution</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img 
+                    src="image3.png" 
+                    alt="Plastic waste on beach shoreline" 
+                    class="w-full h-64 md:h-48 lg:h-56 object-cover rounded-lg shadow-md"
+                    loading="lazy"
+                />
+                <img 
+                    src="download (1).jpeg" 
+                    alt="Marine animal affected by plastic debris" 
+                    class="w-full h-64 md:h-48 lg:h-56 object-cover rounded-lg shadow-md"
+                    loading="lazy"
+                />
+                <img 
+                    src="download (2).jpeg" 
+                    alt="Community beach cleanup in action" 
+                    class="w-full h-64 md:h-48 lg:h-56 object-cover rounded-lg shadow-md"
+                    loading="lazy"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (darker + form inputs updated) -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Contact Us</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-white">Get Involved</h3>
+                        <p class="text-gray-300 mb-6">Ready to make a difference? Contact us to learn more about our initiatives, volunteer opportunities, and partnership programs.</p>
+                        <div class="space-y-4">
+                            
+                            
+                        <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-white mr-4"></i>
+                                <span>New Delhi, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors text-white">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors text-white">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors text-white"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-white text-black py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (dark) -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold text-white">Make A World Free Of Plastic Pollution</h3>
+                    <p class="text-gray-400">Protecting our sorroundings one piece of plastic at a time.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Clean Oceans Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handlers
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        }
+
+        // Mobile menu toggle (if present)
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        const navMenu = document.querySelector('.hidden.md\\:flex');
+        
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                navMenu.classList.toggle('hidden');
+                navMenu.classList.toggle('flex');
+                navMenu.classList.toggle('flex-col');
+                navMenu.classList.toggle('absolute');
+                navMenu.classList.toggle('top-16');
+                navMenu.classList.toggle('left-0');
+                navMenu.classList.toggle('right-0');
+                navMenu.classList.toggle('bg-white');
+                navMenu.classList.toggle('p-4');
+                navMenu.classList.toggle('space-y-4');
+            });
+        }
+    </script>
+</body>
+</html>

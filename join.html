@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Join Our Community — Clean Oceans Initiative</title>
+    <meta name="description" content="Sign up to join the Clean Oceans Initiative community." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-black">Clean Oceans Initiative</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition-colors">Home</a>
+                    <a href="index.html#about" class="text-black hover:text-gray-600 transition-colors">About</a>
+                    <a href="index.html#mission" class="text-black hover:text-gray-600 transition-colors">Our Mission</a>
+                    <a href="index.html#contact" class="text-black hover:text-gray-600 transition-colors">Contact</a>
+                    <a href="join.html" class="text-black hover:text-gray-600 transition-colors font-semibold">Join</a>
+                </div>
+                <button class="md:hidden text-black">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Join Our Community Page Content -->
+    <main class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-center mb-6 text-black">Join Our Community</h1>
+                <p class="text-gray-700 text-center mb-6">Sign up to receive updates, volunteer opportunities, and event invites.</p>
+                <form id="join-form" class="space-y-6" novalidate>
+                    <div>
+                        <label for="join-name" class="block text-sm font-medium mb-2">Full Name</label>
+                        <input type="text" id="join-name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" />
+                    </div>
+                    <div>
+                        <label for="join-age" class="block text-sm font-medium mb-2">Age</label>
+                        <input type="number" id="join-age" name="age" min="0" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" />
+                    </div>
+                    <div>
+                        <label for="join-email" class="block text-sm font-medium mb-2">Email Address</label>
+                        <input type="email" id="join-email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black" />
+                    </div>
+                    <button type="submit" class="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">Submit</button>
+                </form>
+                <p class="text-center text-sm text-gray-500 mt-4">Already signed up? <a href="index.html#contact" class="text-black underline">Contact us</a>.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (brief) -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2024 Clean Oceans Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // handle join form submit on this page
+        const joinForm = document.getElementById('join-form');
+        if (joinForm) {
+            joinForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = this.querySelector('input[name="name"]').value.trim();
+                const email = this.querySelector('input[name="email"]').value.trim();
+                if (!name || !email) {
+                    alert('Please provide your name and email.');
+                    return;
+                }
+                alert('Thanks for joining our community! Check your email for updates.');
+                this.reset();
+                // TODO: wire to backend or mailing list API
+            });
+        }
+    </script>
+</body>
+</html>

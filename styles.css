@@ -1,0 +1,102 @@
+/* Monochrome (black & white) theme + pink flower cursor */
+
+/* Color tokens */
+:root {
+    --black: rgb(0, 0, 0);
+    --white: #ffffff;
+    --muted: rgba(255,255,255,0.7);
+}
+
+/* Base page colors */
+html, body {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+/* Force most elements into monochrome so Tailwind utility classes don't override the look */
+* {
+    color: inherit !important;
+    background-color: transparent !important;
+    border-color: var(--white) !important;
+}
+
+/* Ensure main layout containers stay dark (exclude header/nav so glass can work) */
+section, footer, .container, .grid, .max-w-4xl, .bg-white, .bg-gray-100, .bg-gray-900, .bg-gray-800, .bg-gray-700 {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+/* Make header transparent so the glass-nav background is visible */
+header {
+    background: transparent !important;
+}
+
+/* Links / buttons — high contrast white outline, invert on hover */
+a, button {
+    color: var(--white) !important;
+    background: transparent !important;
+    border-color: var(--white) !important;
+}
+
+a:hover, button:hover {
+    color: var(--black) !important;
+    background: var(--white) !important;
+}
+
+/* Inputs and form controls */
+input, textarea, select {
+    background: transparent !important;
+    color: var(--white) !important;
+    border: 1px solid var(--white) !important;
+    caret-color: var(--white) !important;
+}
+
+::placeholder { color: var(--muted) !important; }
+
+/* Make media black & white */
+img, video, svg {
+    filter: grayscale(100%) contrast(105%) brightness(95%);
+}
+
+/* Small tweaks for icon colors */
+.fa, .fas, .fab { color: var(--white) !important; }
+
+/* Pink flower cursor (SVG data URI). Hotspot set to center (12 12). Fallback: pointer */
+body, a, button, input, textarea {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'><g><path fill='%23ff69b4' d='M12 2c1.1 0 2 .9 2 2 0 .5-.2 1-.6 1.4C15 6 16 7 16 8c0 1.1-.9 2-2 2-.5 0-1-.2-1.4-.6C11 11 10 12 9 12c-1.1 0-2-.9-2-2 0-.5.2-1 .6-1.4C7 6 6 5 6 4c0-1.1.9-2 2-2z'/><circle cx='12' cy='12' r='3' fill='%23ff69b4'/></g></svg>") 12 12, pointer !important;
+}
+
+/* Provide a native fallback for environments that don't accept custom cursor */
+body { cursor: pointer; }
+
+/* Glass effect for top navigation */
+.glass-nav {
+    background: rgba(255,255,255,0.04) !important;
+    backdrop-filter: blur(8px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(8px) saturate(120%) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6) !important;
+    border-radius: 12px;
+    display: block;
+    width: calc(100% - 32px);
+    margin: 8px auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* keep nav links readable and crisp on the glass */
+.glass-nav a {
+    color: var(--white) !important;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+}
+
+/* small-screen spacing so rounded glass doesn't touch edges */
+@media (max-width: 768px) {
+    .glass-nav {
+        width: calc(100% - 16px);
+        margin: 8px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
